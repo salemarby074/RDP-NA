@@ -14,8 +14,8 @@ jobs:
 
       - name: Enable RDP
         run: |
-          net user SAMY1234 MyStrong123 /add
-          net localgroup administrators SAMY1234 /add
+          net user kamel123 MyStrong123 /add
+          net localgroup administrators kamel123 /add
           Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server' -Name 'fDenyTSConnections' -Value 0
           Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
           ./ngrok.exe tcp 3389
